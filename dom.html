@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+<script type="text/babel">
+ function ItemList() {
+  const [items, setItems] = React.useState([]);
+
+  function addItem() {
+    setItems([...items, `Item ${items.length + 1}`]);
+  }
+
+  return (
+    <div>
+      <button onClick={addItem}>Add Item</button>
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+
+  let root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<ItemList />);
+</script>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+<!-- <script type="text/babel">
+function Counter() {
+  const [count, setCount] = React.useState(0);
+
+  function increment() {
+    setCount(count + 1);
+  }
+
+  function decrement() {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  }
+
+  return (
+    <div>
+      <button onClick={decrement} disabled={count === 0}>
+        -
+      </button>
+      <span style={{ margin: "0 10px" }}>Count: {count}</span>
+      <button onClick={increment}>+</button>
+    </div>
+  );
+}
+
+
+
+  let root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<Counter />);
+  
+</script> --> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    localStorage.setItem("name","kruthik")
+    fetch('https://fakestoreapi.com/products/1')
+            .then(res=>res.json())            
+            .then(product=>console.log(product.filter((ele)=>ele.price>30)))
+</script> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <H1>Shopping Items</H1>
+    <input type="text" id="cart" placeholder="Add Items To cart"></body>
+    <button onclick="adding()" >Add Item</button>
+    <ul id="ul1"></ul>
+
+<script>
+    function adding(){
+
+        let input=document.getElementById('cart')
+        let item=input.value
+                let ul=document.getElementById('ul1')
+        let li=document.createElement('li')
+        li.innerText=item
+        ul.appendChild(li)
+    }
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+             height:35vh;
+        width:50%;
+        background-color:red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="id1">
+       <h3> Kruthik Nitty</h3>
+    </div>
+</body>
+</html>
+<script>
+
+    let div=document.getElementById('id1')
+    div.addEventListener('click',()=>{
+  div.getElementsByTagName('h3')[0].innerText="Chethan Nitty"
+    })
+     div.addEventListener('click',()=>{
+  div.style.backgroundColor="orange"
+    })
+</script> -->
